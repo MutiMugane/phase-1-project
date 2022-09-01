@@ -1,1 +1,17 @@
- 
+.container {
+    box-shadow: 0 2px 8px rgba(234, 150, 150, 0.1);
+    padding-right: 100px;
+    padding-left: 100px;
+    background-color: royalblue;
+}
+.kichwa{
+    font-size: 80px;
+    text-align: center;
+    font-style: oblique;    
+
+}
+.feedback{
+    align-items: center;
+    font-size: 28px;
+}
+

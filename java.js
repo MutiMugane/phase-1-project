@@ -2,9 +2,9 @@ async function getArticles(){
     await fetch('https://api.nytimes.com/svc/mostpopular/v2/emailed/7.json?api-key=38G74vVPGc7bHRMg2hqVZJenFtq8PgDO')
     .then(d => d.json())
     .then(resp => {
-        console.log(resp.results);
-        for(var i = 0; i < resp.results.length; i++){
-            const output = document.getElementById('output');
+    console.log(resp.results);
+    for(var i = 0; i < resp.results.length; i++){
+    const output = document.getElementById('output');
             
             try{
                 output.innerHTML += `
@@ -17,6 +17,7 @@ async function getArticles(){
                     </div>
                     </div>
                     </div>
+                    
                     <br>
                     `
                 console.log(resp.results[i]['media'][0].caption);
@@ -31,3 +32,28 @@ async function getArticles(){
     })
 }
 getArticles();
+
+document.getElementById("btn").addEventListener("click", function() {
+    alert("Thank You for Your Feedback!");
+  });
+
+  const ononline="onFunction()" ;
+  const onoffline="offFunction()";
+  
+  function onFunction() {
+    alert ("Your browser is working online.");
+  }
+  
+  function offFunction() {
+    alert ("Your browser is working offline.");
+  }
+document.getElementById("text").addEventListener("onmouseover")
+  function bigImg(x) {
+    x.style.height = "550px";
+    x.style.width = "750px";
+  }
+  document.getElementById("text").addEventListener("onmouseover") 
+  function normalImg(x) {
+    x.style.height = "200px";
+    x.style.width = "350px";
+  }
